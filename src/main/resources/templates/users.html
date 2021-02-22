@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>用户编号</td>
+            <td>用户名称</td>
+            <td>用户密码</td>
+            <td>用户手机号</td>
+            <td>用户支付宝账号</td>
+            <td>用户支付宝密码</td>
+        </tr>
+        <tr th:each="user:${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.phone}"></td>
+            <td th:text="${user.pay_id}"></td>
+            <td th:text="${user.pay_password}"></td>
+        </tr>
+    </table>
+</body>
+</html>
